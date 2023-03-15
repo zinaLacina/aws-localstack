@@ -1,0 +1,15 @@
+awslocal kms encrypt \
+      --key-id b69f6ba0-de18-4cef-9da1-8f61bafdaaba \
+      --plaintext "some important stuff" \
+      --output text \
+      --query CiphertextBlob \
+  | base64 --decode > my_encrypted_data
+
+  awslocal kms encrypt \
+      --key-id b69f6ba0-de18-4cef-9da1-8f61bafdaaba \
+      --plaintext "some important stuff" \
+      --output text
+
+
+ kms encrypt --region ${MyRegion} --key-id ${MyKmsKeyId} --plaintext "string-to-encrypt" --output text --query CiphertextBlob --
+cli-binary-format raw-in-base64-out | base64 --decode > my_encrypted_data

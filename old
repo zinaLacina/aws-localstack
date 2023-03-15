@@ -1,0 +1,29 @@
+version: '3.0'
+
+services:
+
+#  localstack:
+#    container_name: "localstack"
+#    image: localstack/localstack:latest
+#    environment:
+#      - AWS_DEFAULT_REGION=us-east-1
+##      - EDGE_PORT=4566
+#      - SERVICES=es,s3,ec2,dynamodb,elasticcache,sqs
+#      - DEBUG=1
+#      - LAMBDA_REMOTE_DOCKER=0
+#      - DATA_DIR=/var/lib/localstack/data
+#      - DEFAULT_REGION=us-east-1
+#      - DYNAMO_TABLE_NAME="auditLog"
+#    command:
+#      - /bin/sh
+#      - -c
+#      - |
+#        ls /var/
+#        echo "docker"
+#    ports:
+#      - "4566:4566" # Default port forward
+#      - "9200:4571" # Elasticsearch port forward
+#      - "9999:8080" # WebUI port forward
+#    volumes:
+#      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+#      - "/var/run/docker.sock:/var/run/docker.sock"
